@@ -9,11 +9,16 @@ ActiveRecord::Base.logger = Logger.new('debug.log')
 ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'products.sqlite3')
 
 class Product < ActiveRecord::Base
+	include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
+	def create
+	end
+	add_transaction_tracer :create, :category => :task
 end
 
-tv = Product.new(:name => 'tv')
+tv = Product.new(:name => 'tv').create
 shoe = Product.new(:name => 'shoe')
 
 data = Product.all
 
-puts data.inspect
+::NewRelic::Agent.shutdown
+
