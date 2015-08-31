@@ -1,0 +1,5 @@
+# Logfile created on 2015-08-30 17:46:58 -0700 by logger.rb/36483
+D, [2015-08-30T17:46:58.689655 #14055] DEBUG -- :   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+D, [2015-08-30T17:47:44.630006 #14072] DEBUG -- :   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+D, [2015-08-30T17:51:59.705048 #14093] DEBUG -- :   [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+D, [2015-08-30T17:52:13.901884 #14110] DEBUG -- :   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
